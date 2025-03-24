@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title th:text="${post.id != null} ? 'Edit Post' : 'New Post'">Post</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2 th:text="${post.id != null} ? 'Edit Post' : 'New Post'">Post</h2>
+    </header>
+    <form th:action="@{/posts/save}" th:object="${post}" method="post">
+      <input type="hidden" th:field="*{id}" />
+      <div>
+        <label>Title:</label>
+        <input type="text" th:field="*{title}" placeholder="Enter title" required/>
+      </div>
+      <div>
+        <label>Content:</label>
+        <textarea th:field="*{content}" placeholder="Enter post content" required></textarea>
+      </div>
+      <button type="submit">Save</button>
+    </form>
+    <a th:href="@{/posts}">Back to Posts</a>
+  </div>
+</body>
+</html>

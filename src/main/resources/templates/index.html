@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my <a href="https://github.com/artqqwr/blog">Blog Application</a></h1>
+        <p>My <a href="https://github.com/artqqwr">github.com/artqqwr</a></p>
+        
+        <p>Please <a th:href="@{/login}">log in</a> or <a th:href="@{/signup}">sign up</a>.
+            After go to <a href="/posts">/posts</a></p>
+        <br>
+        <form th:action="@{/logout}" method="post" style="display: inline;">
+            <input type="hidden" name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <button type="submit" class="btn btn-secondary">Logout</button>
+        </form>
+    </div>
+</body>
+
+</html>
