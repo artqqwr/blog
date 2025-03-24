@@ -4,9 +4,11 @@
 ![image](https://github.com/user-attachments/assets/45e4bb48-292b-45ea-89f4-d610bdd292ec)
 ### TODO:
 - [X] Basic crud blog
+- [ ] Tags
 - [ ] Likes
 - [ ] Reposts
 - [X] Basic UI
 - [X] Auth
-- [X] Database
+- [X] Databaseb(H2)
 - [ ] Postgres
+- [ ] **IN PROGRESS** Simple recommendation system
